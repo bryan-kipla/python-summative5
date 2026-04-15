@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+instance/
+app.db
+.mypy_cache/
+.env
+Pipfile.lock
