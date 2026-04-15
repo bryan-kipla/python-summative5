@@ -8,7 +8,7 @@ app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 
-# --- MODELS ---
+# MODELS
 class Workout(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     date = db.Column(db.Date, nullable=False, default=lambda: date.today())
@@ -28,7 +28,7 @@ class WorkoutExercise(db.Model):
     reps = db.Column(db.Integer)
     sets = db.Column(db.Integer)
 
-# --- ROUTES ---
+# ROUTES
 @app.route("/workouts", methods=["GET"])
 def get_workouts():
     workouts = Workout.query.all()

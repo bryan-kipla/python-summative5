@@ -11,8 +11,7 @@ pipenv shell
 flask db init
 flask db migrate -m "initial migration"
 flask db upgrade
-python server/seed.py
-```
+
 
 ## Run Instructions
 ```bash
